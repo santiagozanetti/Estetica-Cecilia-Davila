@@ -1,17 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --primary-color: #f3eae5;
   --text-dark: #2c2724;
   --white: #ffffff;
   --max-width: 1200px;
+  --color-principal: #ff8093;
+  --color-oscuro-hover: #e66b7c;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -53,12 +54,12 @@ header .navigation .navigation-items a {
 header .navigation .navigation-items a::before {
   content: "";
   position: absolute;
-  background: #000;
+  background: var(--white);
   width: 0;
   height: 3px;
-  bottom: -5px;
+  bottom: -8px;
   left: 0;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 
 header .navigation .navigation-items a:hover:before {
@@ -76,14 +77,14 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #2696e9;
+  background: #e2bf99;
 }
 
 .home:before {
   z-index: 777;
   content: "";
   position: absolute;
-  background: rgba(3, 96, 251, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   top: 0;
@@ -103,8 +104,8 @@ section {
 }
 
 .home .content h1 {
-  font-size: 4em;
-  font-weight: 900;
+  font-size: 3.5em;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 75px;
@@ -112,7 +113,6 @@ section {
 }
 
 .home .content h1 span {
-  font-size: 1.2em;
   font-weight: 600;
 }
 
@@ -121,13 +121,19 @@ section {
 }
 
 .home .content a {
-  background: #fff;
+  background: #ff8093;
   padding: 15px 35px;
-  color: #1680ac;
+  color: #fff;
   font-size: 1.1em;
   font-weight: 500;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.home .content a:hover {
+  background-color: #f2677c;
+  transition: 0.3s ease;
+  color: #fff;
 }
 
 .home .media-icons {
@@ -140,7 +146,7 @@ section {
 
 .home .media-icons a {
   color: #fff;
-  font-size: 1.6em;
+  font-size: 2em;
   text-decoration: none;
   transition: 0.5s ease;
 }
@@ -187,7 +193,7 @@ section {
 }
 
 .slider-navigation .nav-btn.active {
-  background: #2696e9;
+  background: var(--color-principal);
 }
 
 /* separo los puntos de las img */
@@ -274,6 +280,7 @@ section {
     height: 40px;
     cursor: pointer;
     transition: 0.3s ease;
+    filter: invert(100%);
   }
 
   .menu-btn.active {
@@ -283,4 +290,228 @@ section {
     background-position: center;
     transition: 0.3 ease;
   }
+}
+
+/* tamaño para celulares */
+@media (max-width: 768px) {
+  header .brand {
+    font-size: 1rem;
+  }
+  .home .content h1 {
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 45px;
+    margin-bottom: 20px;
+  }
+
+  .home .content h1 span {
+    font-weight: 700;
+  }
+
+  .home .content p {
+    margin-bottom: 45px;
+  }
+}
+
+/* --------------------- SECCION BENEFICIOS ---------------------- */
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.benefit {
+  width: calc(33.33% - 40px);
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefit img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5%;
+  margin-bottom: 25px;
+  transition: opacity 0.3s ease;
+}
+
+.benefit h2 {
+  font-size: 1.5em;
+  color: #ff8093;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.benefit p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cta {
+  background-color: var(--color-principal);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.cta:hover {
+  background-color: var(--color-oscuro-hover);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .benefit {
+    width: calc(
+      100% - 20px
+    ); /* Cambiado para que cada beneficio ocupe el ancho completo */
+    margin: 10px; /* Reducido el margen entre beneficios */
+  }
+
+  .benefit img {
+    max-width: 100%; /* Ajustado para que la imagen ocupe el ancho completo del beneficio */
+    margin-bottom: 15px; /* Reducido el margen inferior de la imagen */
+  }
+}
+
+/* ---------------------------- SECCION SOBRE MI-------------------------------- */
+
+.about-me {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-me-content {
+  text-align: center;
+}
+
+.about-me-content h2 {
+  font-size: 2.2em;
+  color: var(--color-principal);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.about-me-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+.about-me-info img {
+  width: 400px;
+  height: 300px;
+  border-radius: 5%;
+  margin-right: 50px;
+}
+
+.about-me-info p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.about-me-info p span {
+  color: var(--color-principal);
+  font-weight: 600;
+}
+/* -------------------------- para celulares -------------------------- */
+@media screen and (max-width: 768px) {
+  .about-me-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-me-info img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+
+  .about-me-info p {
+    font-size: 1em;
+    max-width: 95%;
+  }
+}
+
+/* -------------------------- SECCION TRATAMIENTOS -----------------------------  */
+
+.treatments {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.categories-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Añade espacio entre las categorías */
+}
+
+.category {
+  flex: 1; /* Distribuye el espacio disponible de manera uniforme */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  color: #2696e9;
+  margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+}
+
+.card p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Espacio entre el párrafo y la lista */
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card ul li i {
+  margin-right: 5px;
+  color: #2696e9;
 }
