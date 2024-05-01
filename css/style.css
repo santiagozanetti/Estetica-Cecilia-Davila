@@ -30,8 +30,8 @@ header {
 
 header .brand {
   color: #fff;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 200;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -44,7 +44,7 @@ header .navigation .navigation-items a {
   position: relative;
   color: #fff;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 300;
   text-decoration: none;
   margin-left: 30px;
   transition: 0.3s ease;
@@ -467,51 +467,97 @@ section {
   padding: 0 20px;
 }
 
-.categories-grid {
-  display: flex;
-  justify-content: center;
-  gap: 40px; /* Añade espacio entre las categorías */
+h2 {
+  font-size: 2.2em;
+  color: var(--color-principal);
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.category {
-  flex: 1; /* Distribuye el espacio disponible de manera uniforme */
+.treatment-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card {
+  width: calc(50% - 20px);
+  margin-bottom: 40px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
   padding: 20px;
-  text-align: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card h3 {
+.card-content h3 {
   font-size: 1.5em;
-  color: #2696e9;
-  margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+  color: var(--color-principal);
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.card p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 20px; /* Espacio entre el párrafo y la lista */
-}
-
-.card ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.card ul li {
+.card-content p {
   font-size: 1em;
   line-height: 1.6;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 25px;
+  text-align: left;
 }
 
-.card ul li i {
-  margin-right: 5px;
-  color: #2696e9;
+.read-more {
+  background-color: var(--color-principal);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: inline-block; /* Alinea el botón en el centro */
 }
+
+.read-more:hover {
+  background-color: var(--color-oscuro-hover);
+  color: #fff;
+}
+
+/* -------------------- dispositivos móviles -------------------- */
+@media only screen and (max-width: 768px) {
+  .treatment-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px; /* Reduce el margen inferior de las tarjetas */
+  }
+
+  .card-content {
+    height: auto; /* Altura automática para adaptarse al contenido */
+  }
+
+  .card img {
+    border-radius: 8px 8px 0 0; /* Ajusta el radio de borde superior de la imagen */
+  }
+
+  .card-content p {
+    text-align: center;
+  }
+}
+
+/* --------------------- TESTIMONIOS ---------------------- */
