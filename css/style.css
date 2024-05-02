@@ -561,3 +561,117 @@ h2 {
 }
 
 /* --------------------- TESTIMONIOS ---------------------- */
+
+/* --------------------- PREGUNTAS FRECUENTES ---------------------- */
+
+.faq {
+  margin-top: -4em; /* Ajusta este valor según sea necesario */
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5em; /* Reducido para acercar el título */
+}
+
+.faq-header {
+  text-align: center;
+}
+
+details {
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  background: #f6faff;
+  border-radius: 0.5rem;
+  position: relative;
+  max-width: 600px;
+  border: 1px solid var(--color-principal); /* Borde más delgado */
+  transition: border-color 0.3s ease-in-out; /* Suaviza la transición del color del borde */
+}
+
+details:hover {
+  border-color: var(
+    --color-oscuro-hover
+  ); /* Cambia el color del borde al hacer hover */
+}
+
+summary {
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  list-style: none;
+  padding: 1rem;
+  align-items: center;
+}
+
+summary:hover .faq-title {
+  opacity: 1;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
+summary:hover .expand-icon {
+  opacity: 1;
+}
+
+.faq-title {
+  color: #1c2035;
+  width: 95%;
+  opacity: 0.65;
+  transition: all 250ms ease-in-out;
+}
+
+.faq-content {
+  color: #303651;
+  padding: 0.5rem 1rem 1rem 1rem; /* Ajuste en el espaciado interno */
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.expand-icon {
+  opacity: 0.65;
+}
+
+.expand-icon {
+  pointer-events: none;
+  position: absolute;
+  right: 1rem;
+  transition: all 150ms ease-out;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .faq-container {
+    margin-top: 0.5em;
+    padding: 0 1em;
+  }
+
+  .faq {
+    margin-top: -7em;
+  }
+
+  .faq-header h2 {
+    margin-bottom: 1em;
+  }
+
+  details {
+    max-width: none;
+  }
+
+  .faq-content {
+    padding: 0.5rem;
+  }
+
+  .expand-icon {
+    right: 0.5rem;
+  }
+}
