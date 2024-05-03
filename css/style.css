@@ -373,15 +373,14 @@ section {
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   .benefit {
-    width: calc(
-      100% - 20px
-    ); /* Cambiado para que cada beneficio ocupe el ancho completo */
-    margin: 10px; /* Reducido el margen entre beneficios */
+    width: calc(100% - 20px);
+    margin: 10px;
+    margin-bottom: 40px;
   }
 
   .benefit img {
-    max-width: 100%; /* Ajustado para que la imagen ocupe el ancho completo del beneficio */
-    margin-bottom: 15px; /* Reducido el margen inferior de la imagen */
+    max-width: 100%;
+    margin-bottom: 15px;
   }
 }
 
@@ -437,6 +436,9 @@ section {
 }
 /* -------------------------- para celulares -------------------------- */
 @media screen and (max-width: 768px) {
+  .about-me {
+    padding: 5px 0;
+  }
   .about-me-info {
     flex-direction: column;
     text-align: center;
@@ -486,7 +488,7 @@ h2 {
   margin-bottom: 40px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
@@ -497,7 +499,7 @@ h2 {
 
 .card-content {
   padding: 20px;
-  height: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -522,13 +524,13 @@ h2 {
 .read-more {
   background-color: var(--color-principal);
   color: #fff;
-  padding: 10px 30px;
+  padding: 10px 40px;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
   text-transform: uppercase;
   margin: 0 auto;
-  display: inline-block; /* Alinea el botón en el centro */
+  display: inline-block;
 }
 
 .read-more:hover {
@@ -538,21 +540,25 @@ h2 {
 
 /* -------------------- dispositivos móviles -------------------- */
 @media only screen and (max-width: 768px) {
+  .treatments {
+    margin-top: 10px;
+  }
+
   .treatment-cards {
     flex-direction: column;
   }
 
   .card {
     width: 100%;
-    margin-bottom: 20px; /* Reduce el margen inferior de las tarjetas */
+    margin-bottom: 20px;
   }
 
   .card-content {
-    height: auto; /* Altura automática para adaptarse al contenido */
+    height: auto;
   }
 
   .card img {
-    border-radius: 8px 8px 0 0; /* Ajusta el radio de borde superior de la imagen */
+    border-radius: 8px 8px 0 0;
   }
 
   .card-content p {
@@ -562,17 +568,93 @@ h2 {
 
 /* --------------------- TESTIMONIOS ---------------------- */
 
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonials {
+  padding: 50px 0;
+}
+
+.testimonials-item {
+  background-color: var(--color-principal);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.testimonials-item .info {
+  display: flex;
+  align-items: center;
+}
+
+.testimonials-item img {
+  max-width: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  vertical-align: middle;
+  height: 80px;
+}
+
+.testimonials-item .name {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.testimonials-item .job {
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.testimonials-item p {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.testimonials-item .rating {
+  margin-top: 20px;
+  font-size: 14px;
+  color: gold;
+}
+
+.testimonials .swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  bottom: auto;
+}
+
+.testimonials .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background-color: var(--color-oscuro-hover);
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 50px 0;
+  }
+}
+
 /* --------------------- PREGUNTAS FRECUENTES ---------------------- */
 
 .faq {
-  margin-top: -4em; /* Ajusta este valor según sea necesario */
+  margin-top: -4em;
 }
 
 .faq-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1.5em; /* Reducido para acercar el título */
+  margin-top: 1.5em;
 }
 
 .faq-header {
@@ -587,14 +669,12 @@ details {
   border-radius: 0.5rem;
   position: relative;
   max-width: 600px;
-  border: 1px solid var(--color-principal); /* Borde más delgado */
-  transition: border-color 0.3s ease-in-out; /* Suaviza la transición del color del borde */
+  border: 1px solid var(--color-principal);
+  transition: border-color 0.3s ease-in-out;
 }
 
 details:hover {
-  border-color: var(
-    --color-oscuro-hover
-  ); /* Cambia el color del borde al hacer hover */
+  border-color: var(--color-oscuro-hover);
 }
 
 summary {
@@ -632,7 +712,7 @@ summary:hover .expand-icon {
 
 .faq-content {
   color: #303651;
-  padding: 0.5rem 1rem 1rem 1rem; /* Ajuste en el espaciado interno */
+  padding: 0.5rem 1rem 1rem 1rem;
   font-weight: 300;
   line-height: 1.5;
 }
