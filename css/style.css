@@ -26,6 +26,10 @@
   scroll-behavior: smooth;
 }
 
+.icon {
+  fill: #ff0000 !important;
+}
+
 header {
   z-index: 999;
   position: absolute;
@@ -218,7 +222,6 @@ section {
   margin-right: 20px;
 }
 
-/* que se agranden al pasar por encima */
 .slider-navigation .nav-btn:hover {
   transform: scale(1.2);
 }
@@ -328,6 +331,10 @@ section {
 
   .home .content p {
     margin-bottom: 45px;
+  }
+  /* boton de pagina home */
+  .home .content a {
+    padding: 12px 25px;
   }
 }
 
@@ -927,9 +934,10 @@ summary:hover .expand-icon {
 }
 
 .footer-column h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .footer-column p {
@@ -950,6 +958,11 @@ summary:hover .expand-icon {
   color: #fff;
   text-decoration: none;
   font-weight: 200;
+}
+
+.footer-column ul li a:hover {
+  color: var(--color-principal);
+  transition: 0.3s ease;
 }
 
 .social-icons {
@@ -993,5 +1006,66 @@ summary:hover .expand-icon {
   .copyright {
     margin-top: 1px;
     padding: 20px;
+  }
+}
+
+/* -------------------- botones flotantes ----------------------*/
+
+.btn-wsp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0df053;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.btn-wsp:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #0aa345;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-scroll-top {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 90px;
+  right: 30px;
+  background-color: var(--color-principal);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  cursor: pointer;
+}
+
+.btn-scroll-top:hover {
+  background-color: var(--color-oscuro-hover);
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .btn-wsp {
+    right: 10px;
+    bottom: 20px;
+  }
+
+  .btn-scroll-top {
+    right: 10px;
+    bottom: 80px;
   }
 }

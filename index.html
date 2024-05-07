@@ -20,6 +20,7 @@
     />
 
     <title>Estética Cecilia Dávila</title>
+    <link class="icon" rel="icon" href="assets/icono-pluma.jpg" />
   </head>
   <body>
     <header>
@@ -27,7 +28,7 @@
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
-          <a href="#">Inicio</a>
+          <a href="#home">Inicio</a>
           <a href="#nosotros">Quien Soy</a>
           <a href="#tratamientos">Tratamientos</a>
           <a href="#promociones">Promociones</a>
@@ -135,7 +136,9 @@
       </div>
       <div class="media-icons">
         <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="https://www.instagram.com/esteticasanisidro/" target="_blank"
+          ><i class="ri-instagram-line"></i
+        ></a>
       </div>
       <div class="slider-navigation">
         <div class="nav-btn active"></div>
@@ -524,7 +527,7 @@
           </div>
           <div class="info-item">
             <i class="far fa-clock"></i>
-            <p>Horario de atención: Lunes a Viernes 9:00am - 19:00pm</p>
+            <p>Horario de atención: Lunes a Sábado 9:00am - 20:00pm.</p>
           </div>
           <div class="social-media">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -550,11 +553,11 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
-          <h3>Nombre del Sitio</h3>
-          <p>Una breve descripción del sitio.</p>
+          <h3>Estética Cecilia Dávila</h3>
+          <p>Salón de belleza en San Isidro</p>
         </div>
         <div class="footer-column">
-          <h3>Enlaces</h3>
+          <h3>Secciones</h3>
           <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#nosotros">Quien soy</a></li>
@@ -570,7 +573,11 @@
               <a href="#"><i class="fab fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a
+                href="https://www.instagram.com/esteticasanisidro/"
+                target="_blank"
+                ><i class="ri-instagram-line"></i
+              ></a>
             </li>
           </ul>
         </div>
@@ -580,6 +587,19 @@
       </p>
     </footer>
 
+    <!-- BOTONES FLOTANTES -->
+    <a
+      href="https://api.whatsapp.com/send?phone=1150377127"
+      class="btn-wsp"
+      target="_blank"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a class="btn-scroll-top" id="btnScrollTop" target="_blank">
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+
     <!------------------------- SCRIPTS ------------------------>
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -588,6 +608,7 @@
     <script src="js/tetimonials.js"></script>
     <script src="js/faq.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/boton-flotante-incio.js"></script>
     <script>
       const swiper = new Swiper(".js-testimonials-slider", {
         grabCursor: true,
