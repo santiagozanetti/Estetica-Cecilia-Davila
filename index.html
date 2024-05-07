@@ -28,10 +28,10 @@
       <div class="navigation">
         <div class="navigation-items">
           <a href="#">Inicio</a>
-          <a href="#">Quien Soy</a>
-          <a href="#">Tratamientos</a>
-          <a href="#">Contacto</a>
-          <a href="#">Ubicación</a>
+          <a href="#nosotros">Quien Soy</a>
+          <a href="#tratamientos">Tratamientos</a>
+          <a href="#promociones">Promociones</a>
+          <a href="#contacto">Contacto</a>
         </div>
       </div>
     </header>
@@ -43,13 +43,16 @@
         autoplay
         muted
         loop
+        playsinline
       ></video>
+
       <video
         class="video-slide"
         src="assets/video-fondo-2.mp4"
         autoplay
         muted
         loop
+        playsinline
       ></video>
       <video
         class="video-slide"
@@ -57,6 +60,7 @@
         autoplay
         muted
         loop
+        playsinline
       ></video>
       <video
         class="video-slide"
@@ -64,6 +68,7 @@
         autoplay
         muted
         loop
+        playsinline
       ></video>
       <video
         class="video-slide"
@@ -71,6 +76,7 @@
         autoplay
         muted
         loop
+        playsinline
       ></video>
       <div class="content active">
         <h1>
@@ -81,7 +87,7 @@
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
           aperiam.
         </p>
-        <a href="#">VER MAS</a>
+        <a href="#tratamientos">ver tratamientos</a>
       </div>
       <div class="content">
         <h1>
@@ -92,7 +98,7 @@
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
           aperiam.
         </p>
-        <a href="#">VER MAS</a>
+        <a href="#tratamientos">ver tratamientos</a>
       </div>
       <div class="content">
         <h1>
@@ -103,7 +109,7 @@
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
           aperiam.
         </p>
-        <a href="#">VER MAS</a>
+        <a href="#tratamientos">ver tratamientos</a>
       </div>
       <div class="content">
         <h1>
@@ -114,7 +120,7 @@
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
           aperiam.
         </p>
-        <a href="#">VER MAS</a>
+        <a href="#tratamientos">ver tratamientos</a>
       </div>
       <div class="content">
         <h1>
@@ -125,7 +131,7 @@
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
           aperiam.
         </p>
-        <a href="#">VER MÁS</a>
+        <a href="#tratamientos">ver tratamientos</a>
       </div>
       <div class="media-icons">
         <a href="#"><i class="ri-facebook-circle-fill"></i></a>
@@ -142,7 +148,7 @@
 
     <!---------------- SECCION BENEFICIOS -------------->
 
-    <section class="benefits">
+    <section id="beneficios" class="benefits">
       <div class="benefit">
         <img src="assets/beneficios01.jpg" alt="Beneficio 1" />
         <h2>Renovación de la piel</h2>
@@ -174,7 +180,7 @@
 
     <!---------------- SECCION SOBRE MI -------------->
 
-    <section class="about-me">
+    <section id="nosotros" class="about-me">
       <div class="container">
         <div class="about-me-content">
           <h2>¿Quién soy?</h2>
@@ -195,7 +201,7 @@
     </section>
 
     <!--------------------------- SECCION TRATAMIENTOS --------------------------->
-    <section class="treatments">
+    <section id="tratamientos" class="treatments">
       <div class="container">
         <h2>Tratamientos</h2>
         <div class="treatment-cards">
@@ -220,15 +226,48 @@
             <div class="card-content">
               <h3>Tratamientos Corporales</h3>
               <p>
-                Te ofrecemos soluciones estéticas a molestias faciales teniendo
-                en cuenta tu ritmo actual de vida, con planes de medicina
-                estética especialmente diseñados para lograr cambios naturales y
-                sin cirugías. Contamos con los tratamientos médicos y la
-                tecnología más avanzada en el campo de la medicina estética y un
-                excelente equipo humano cálido y profesional que brinda la mejor
-                atención personalizada.
+                Soluciones estéticas a molestias faciales teniendo en cuenta tu
+                ritmo actual de vida, con planes de medicina estética
+                especialmente diseñados para lograr cambios naturales y sin
+                cirugías. Contamos con los tratamientos médicos y la tecnología
+                más avanzada en el campo de la medicina estética y un excelente
+                equipo humano cálido y profesional que brinda la mejor atención
+                personalizada.
               </p>
               <a href="#" class="read-more">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------ PROMOCIONES ------------------------->
+    <section id="promociones" class="promotions">
+      <div class="container">
+        <h2 class="section-title">Nuestras Promociones</h2>
+        <div class="promotion-grid">
+          <div class="promotion-item">
+            <img src="assets/corporal01.jpg" alt="Promoción 1" />
+            <div class="promotion-details">
+              <h3 class="promotion-title">Tratamiento Facial Deluxe</h3>
+              <p class="promotion-description">
+                ¡Consigue una piel radiante con nuestro exclusivo tratamiento
+                facial deluxe! Incluye limpieza profunda, exfoliación,
+                mascarilla rejuvenecedora y masaje relajante.
+              </p>
+              <a href="#" class="btn btn-primary">aprovechar promo</a>
+            </div>
+          </div>
+          <div class="promotion-item">
+            <img src="assets/corporal02.jpg" alt="Promoción 2" />
+            <div class="promotion-details">
+              <h3 class="promotion-title">Masaje Terapéutico de 60 minutos</h3>
+              <p class="promotion-description">
+                ¡Relaja tu cuerpo y mente con nuestro masaje terapéutico de 60
+                minutos! Elimina el estrés y las tensiones musculares con la
+                técnica más avanzada y el ambiente más acogedor.
+              </p>
+              <a href="#" class="btn btn-primary">aprovechar promo</a>
             </div>
           </div>
         </div>
@@ -249,14 +288,14 @@
                 <div class="info">
                   <img src="assets/perfil01.jpg" alt="" />
                   <div class="text-box">
-                    <h3 class="name">pesi zanetti</h3>
-                    <span class="job">maquina</span>
+                    <h3 class="name">Laura Pollitzer de Cassese</h3>
+                    <span class="job">Paciente</span>
                   </div>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Architecto suscipit quos veniam commodi culpa ipsum nihil,
-                  perspiciatis ab maiores totam?
+                  Muy buenos los tratamientos y la atención es súper cálida Vale
+                  la pena a mi me dió muy buenos resultados Calidad precio es
+                  muy adecuada
                 </p>
                 <div class="rating">
                   <i class="fa fa-star"></i>
@@ -270,14 +309,16 @@
                 <div class="info">
                   <img src="assets/perfil01.jpg" alt="" />
                   <div class="text-box">
-                    <h3 class="name">pesi zanetti</h3>
+                    <h3 class="name">María Eugenia Gomes</h3>
                     <span class="job">maquina</span>
                   </div>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Architecto suscipit quos veniam commodi culpa ipsum nihil,
-                  perspiciatis ab maiores totam?
+                  Excelente todo lo que hace! Yo me hago pelling,
+                  radiofrecuencia, dermapen y limpieza profunda de cutis y me
+                  deja la piel genial! Además de que te asesora con lo que
+                  necesitas, te brinda productos y tiene buenas promociones!!
+                  Cecilia es muy cálida en su atención! 😉
                 </p>
                 <div class="rating">
                   <i class="fa fa-star"></i>
@@ -291,14 +332,30 @@
                 <div class="info">
                   <img src="assets/perfil01.jpg" alt="" />
                   <div class="text-box">
-                    <h3 class="name">pesi zanetti</h3>
+                    <h3 class="name">Maria Oliva Vélez Herbin</h3>
+                    <span class="job">maquina</span>
+                  </div>
+                </div>
+                <p>Excelente y cálida atención! Muy buenos precios y promos</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="assets/perfil01.jpg" alt="" />
+                  <div class="text-box">
+                    <h3 class="name">Paula Matarazzo</h3>
                     <span class="job">maquina</span>
                   </div>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Architecto suscipit quos veniam commodi culpa ipsum nihil,
-                  perspiciatis ab maiores totam?
+                  Graaaaaacias por los tratamientos que me hiciste...y el
+                  peeling muuuy bueno!!!!
                 </p>
                 <div class="rating">
                   <i class="fa fa-star"></i>
@@ -312,14 +369,54 @@
                 <div class="info">
                   <img src="assets/perfil01.jpg" alt="" />
                   <div class="text-box">
-                    <h3 class="name">pesi zanetti</h3>
+                    <h3 class="name">Natalia Iwasetschko</h3>
                     <span class="job">maquina</span>
                   </div>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Architecto suscipit quos veniam commodi culpa ipsum nihil,
-                  perspiciatis ab maiores totam?
+                  Cecilia es una excelente profesional. Realiza tratamientos
+                  faciales y corporales a medida, intercalando masajes manuales
+                  y aparatlogía para conseguir resultados increíbles.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="assets/perfil01.jpg" alt="" />
+                  <div class="text-box">
+                    <h3 class="name">Ines Sanchezlanda</h3>
+                    <span class="job">maquina</span>
+                  </div>
+                </div>
+                <p>
+                  Excelente experiencia y excelente atención. Muy agradecida
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="assets/perfil01.jpg" alt="" />
+                  <div class="text-box">
+                    <h3 class="name">Cristina Quiroga</h3>
+                    <span class="job">maquina</span>
+                  </div>
+                </div>
+                <p>
+                  Excelente la cordialidad y el servicio que ofrece, a mi me
+                  ayudo muchísimo con el drenaje linfático y sin dejar de lado
+                  la limpieza de cutis. Realmente una genia Cecilia
                 </p>
                 <div class="rating">
                   <i class="fa fa-star"></i>
@@ -410,6 +507,80 @@
         </details>
       </div>
     </section>
+
+    <!---------------------- CONTACTO -------------------->
+    <section id="contacto" class="contact">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Contacto</h2>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Dirección: Liniers 546, San Isidro</p>
+          </div>
+
+          <div class="info-item">
+            <i class="fab fa-whatsapp"></i>
+            <p>WhatsApp: 11 5037-7127</p>
+          </div>
+          <div class="info-item">
+            <i class="far fa-clock"></i>
+            <p>Horario de atención: Lunes a Viernes 9:00am - 19:00pm</p>
+          </div>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.327355187834!2d-58.52908392446446!3d-34.46921897300279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0234d882a55%3A0x294facc85d6a71d!2sLiniers%20546%2C%20B1642ESL%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715049179726!5m2!1ses-419!2sar"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------- FOOTER -------------------->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Nombre del Sitio</h3>
+          <p>Una breve descripción del sitio.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Quien soy</a></li>
+            <li><a href="#tratamientos">Tratamientos</a></li>
+            <li><a href="#promociones">Promociones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Redes Sociales</h3>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        Copyright ©2024 Estética Cecilia Dávila - Todos los derechos reservados
+      </p>
+    </footer>
+
+    <!------------------------- SCRIPTS ------------------------>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/menu.js"></script>

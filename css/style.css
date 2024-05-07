@@ -6,6 +6,16 @@
   --max-width: 1200px;
   --color-principal: #ff8093;
   --color-oscuro-hover: #e66b7c;
+  --50: #fff1f2;
+  --100: #ffe3e5;
+  --200: #ffccd2;
+  --300: #ffa1ad;
+  --500: #f93a5c;
+  --600: #e71746;
+  --700: #c30d3a;
+  --800: #a30e38;
+  --900: #8b1037;
+  --950: #4e0318;
 }
 
 * {
@@ -13,6 +23,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -31,7 +42,7 @@ header {
 header .brand {
   color: #fff;
   font-size: 1.8rem;
-  font-weight: 200;
+  font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -51,10 +62,14 @@ header .navigation .navigation-items a {
   text-transform: uppercase;
 }
 
+header .navigation .navigation-items a:hover {
+  color: var(--color-principal);
+}
+
 header .navigation .navigation-items a::before {
   content: "";
   position: absolute;
-  background: var(--white);
+  background: var(--color-principal);
   width: 0;
   height: 3px;
   bottom: -8px;
@@ -67,7 +82,7 @@ header .navigation .navigation-items a:hover:before {
 }
 
 section {
-  padding: 100px 200px;
+  padding: 50px 200px;
 }
 
 .home {
@@ -105,7 +120,7 @@ section {
 
 .home .content h1 {
   font-size: 3.5em;
-  font-weight: 700;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 75px;
@@ -113,7 +128,7 @@ section {
 }
 
 .home .content h1 span {
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .home .content p {
@@ -125,13 +140,14 @@ section {
   padding: 15px 35px;
   color: #fff;
   font-size: 1.1em;
-  font-weight: 500;
+  font-weight: 300;
   text-decoration: none;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 
 .home .content a:hover {
-  background-color: #f2677c;
+  background-color: var(--color-oscuro-hover);
   transition: 0.3s ease;
   color: #fff;
 }
@@ -158,6 +174,7 @@ section {
 .home .media-icons a:hover {
   transform: scale(1.3);
   transition: 0.3s;
+  color: var(--color-principal);
 }
 
 /* acomodo el video para que se ponga de fondo y detras de todas las etiquetas */
@@ -384,7 +401,7 @@ section {
   }
 }
 
-/* ---------------------------- SECCION SOBRE MI-------------------------------- */
+/* ---------------------------- SECCION SOBRE MI -------------------------------- */
 
 .about-me {
   padding: 50px 0;
@@ -519,6 +536,7 @@ h2 {
   line-height: 1.6;
   margin-bottom: 25px;
   text-align: left;
+  color: #333;
 }
 
 .read-more {
@@ -585,7 +603,7 @@ h2 {
 
 .testimonials-item {
   background-color: var(--color-principal);
-  padding: 30px;
+  padding: 20px;
   border-radius: 30px;
 }
 
@@ -753,5 +771,227 @@ summary:hover .expand-icon {
 
   .expand-icon {
     right: 0.5rem;
+  }
+}
+
+/*-------------------------- PROMOCIONES ------------------------ */
+
+.promotions {
+  background-color: var(--100);
+}
+
+.promotion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.promotion-item {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.promotion-item img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.promotion-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.promotion-title {
+  font-size: 24px;
+  color: var(--color-principal);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.promotion-description {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: var(--color-principal);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: var(--color-oscuro-hover);
+}
+
+/*-------------------------- CONTACTO ------------------------*/
+.contact {
+  padding: 12px 0;
+  margin-bottom: 60px;
+}
+
+.contact-container {
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex-basis: 60%;
+}
+
+.info-item {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.info-item i {
+  margin-right: 25px;
+  font-size: 30px;
+  color: var(--color-principal);
+}
+
+.info-item p {
+  margin: 0;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-media a {
+  color: var(--color-principal);
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+.map {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.map iframe {
+  max-width: 100%; /* Asegura que el mapa no exceda el ancho del contenedor */
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contact-info {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  .map {
+    flex-basis: 100%;
+  }
+}
+
+/*-------------------------- FOOTER ------------------------*/
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex-basis: 30%;
+}
+
+.footer-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.footer-column p {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons li a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.copyright {
+  margin-top: 50px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    flex-basis: auto;
+    margin-bottom: 30px;
+  }
+
+  .footer-column h3 {
+    font-size: 1.3rem;
+  }
+  .copyright {
+    margin-top: 1px;
+    padding: 20px;
   }
 }
