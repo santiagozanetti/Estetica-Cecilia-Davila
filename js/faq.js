@@ -1,8 +1,3 @@
-//? This code is for animating details
-//? of summary component and slightly modified
-//? https://css-tricks.com/how-to-animate-the-
-//? details-element-using-waapi/
-
 class Accordion {
   constructor(el) {
     this.el = el;
@@ -38,7 +33,6 @@ class Accordion {
 
   shrink() {
     this.isClosing = true;
-
     const startHeight = `${this.el.offsetHeight}px`;
     const endHeight = `${this.summary.offsetHeight}px`;
 
@@ -74,7 +68,6 @@ class Accordion {
 
   expand() {
     this.isExpanding = true;
-
     const startHeight = `${this.el.offsetHeight}px`;
     const endHeight = `${
       this.summary.offsetHeight + this.content.offsetHeight

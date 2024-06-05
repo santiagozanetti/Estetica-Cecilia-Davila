@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Inicializa Swiper
   var mySwiper = new Swiper(".swiper-container", {
-    slidesPerView: 1, 
+    slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     autoplay: {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       // Ajusta la configuración para dispositivos móviles
       768: {
-        slidesPerView: 2, 
+        slidesPerView: 3,
       },
     },
   });
