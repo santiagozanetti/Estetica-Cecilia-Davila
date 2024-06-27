@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-color: #f3eae5;
+  --text-dark: #2c2724;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --color-principal: #ff8093;
+  --color-oscuro-hover: #e66b7c;
+  --50: #fff1f2;
+  --100: #ffe3e5;
+  --200: #ffccd2;
+  --300: #ffa1ad;
+  --500: #f93a5c;
+  --600: #e71746;
+  --700: #c30d3a;
+  --800: #a30e38;
+  --900: #8b1037;
+  --950: #4e0318;
+  --background-gray: #f0f0f0; /* Nuevo color de fondo gris */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Estilos para separar el título de la sección del navbar */
+header {
+  z-index: 999;
+  position: fixed; /* Cambiado a fixed para mantener visible el navbar al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 120px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Fondo semi-transparente para el navbar */
+  backdrop-filter: blur(
+    10px
+  ); /* Efecto de desenfoque para mejorar la estética */
+  transition: 0.5s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+header .brand {
+  color: #070606;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .brand i {
+  color: #110e0e;
+  margin-right: 10px;
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation .navigation-items a {
+  position: relative;
+  color: #080707;
+  font-size: 1em;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+header .navigation .navigation-items a:hover {
+  color: var(--color-principal);
+}
+
+header .navigation .navigation-items a::before {
+  content: "";
+  position: absolute;
+  background: var(--color-principal);
+  width: 0;
+  height: 3px;
+  bottom: -8px;
+  left: 0;
+  transition: 0.5s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+  width: 100%;
+}
+
+main {
+  margin-top: 75px; /* Ajuste para separar el contenido del navbar */
+}
+
+#tratamientos {
+  background-color: var(--background-gray);
+  padding: 50px 200px;
+}
+
+.treatment-section {
+  margin-bottom: 50px;
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.treatment-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.treatment-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.treatment-card h4 {
+  margin: 15px 0;
+  color: var(--text-dark);
+}
+
+.treatment-card p {
+  padding: 0 15px 15px;
+  color: var(--text-dark);
+}
+
+.treatment-card:hover {
+  transform: translateY(-10px);
+}
+
+/*-------------------------- FOOTER ------------------------*/
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex-basis: 30%;
+}
+
+.footer-column h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.footer-column p {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+.footer-column ul li a:hover {
+  color: var(--color-principal);
+  transition: 0.3s ease;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons li a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.copyright {
+  margin-top: 50px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    flex-basis: auto;
+    margin-bottom: 30px;
+  }
+
+  .footer-column h3 {
+    font-size: 1.3rem;
+  }
+  .copyright {
+    margin-top: 1px;
+    padding: 20px;
+  }
+}

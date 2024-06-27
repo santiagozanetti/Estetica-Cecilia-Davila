@@ -39,7 +39,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 200px;
+  padding: 15px 120px;
   transition: 0.5s ease;
 }
 
@@ -347,24 +347,39 @@ section {
 
 .benefits {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch;
   padding: 50px 20px;
   background-color: var(--color-fondo);
+  text-align: center;
+}
+
+.benefits-title {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.benefits-title h1 {
+  font-size: 2.5em;
+  color: var(--color-principal);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.benefits-title p {
+  font-size: 1.2em;
+  color: var(--color-texto-secundario);
 }
 
 .benefit {
   flex: 1 1 calc(33.33% - 20px);
   margin: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .benefit img {
@@ -383,6 +398,10 @@ section {
   font-weight: 600;
 }
 
+.benefit h2 i {
+  margin-right: 10px;
+}
+
 .benefit p {
   font-size: 1em;
   line-height: 1.6;
@@ -390,18 +409,25 @@ section {
   color: var(--color-texto);
 }
 
-.cta {
-  background-color: var(--color-principal);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
-  font-weight: 600;
+.benefit-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
 
-.cta:hover {
+.benefit-button .btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: var(--color-principal);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.benefit-button .btn:hover {
   background-color: var(--color-oscuro-hover);
 }
 
@@ -519,13 +545,22 @@ section {
   padding: 0 20px;
 }
 
-h2 {
+.treatments-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.treatments-header h2 {
   font-size: 2.5em;
   color: var(--color-principal);
-  margin-bottom: 40px;
-  text-align: center;
+  margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.treatments-header p {
+  font-size: 1.2em;
+  color: var(--color-texto-secundario);
 }
 
 .treatment-cards {
