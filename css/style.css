@@ -901,7 +901,7 @@ summary::-webkit-details-marker {
   content: "\2212";
 }
 
-.content {
+.faqcontent {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
