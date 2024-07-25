@@ -32,6 +32,7 @@
   --p2: 36px/48px var(--ff);
   --subtext: 12px/20px var(--ff);
   --transition: 0.3s ease-in-out;
+  --shadow: #00000030 0px 0px 10px 0px;
 }
 
 * {
@@ -57,6 +58,12 @@ h3 {
 }
 p {
   font: var(--p);
+}
+.p2 {
+  font: var(--p2);
+}
+.p3 {
+  font: var(--p3);
 }
 
 header {
@@ -309,8 +316,8 @@ section {
   }
 
   header .navigation .navigation-items a:before {
-    background: #222;
-    height: 5px;
+    background: var(--color-principal);
+    height: 4px;
   }
 
   header .navigation.active .navigation-items {
@@ -360,7 +367,7 @@ section {
   }
 
   .home .content h1 span {
-    font-weight: 700;
+    font-weight: 300;
   }
 
   .home .content p {
@@ -874,24 +881,30 @@ summary::-webkit-details-marker {
   }
 }
 
-/* prueba ---------------------- */
+/* PRUEBA --------------------------------------------- */
 .collapsible {
   cursor: pointer;
   padding: 36px 20px;
   width: 100%;
-  border-left: 0px solid var(--950);
-  border-right: 0px solid var(--950);
-  border-top: 0px solid var(--950);
-  border-bottom: 1px solid var(--950);
+  border-left: 0px solid var(--color-principal);
+  border-right: 0px solid var(--color-principal);
+  border-top: 0px solid var(--color-principal);
+  border-bottom: 2px solid var(--color-principal);
   text-align: left;
   font: var(--p);
   font-weight: bold;
   background-color: #ffff;
 }
 
+.faq-title-prueba {
+  color: var(--color-principal);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 .collapsible:before {
   content: "\002B";
-  color: var(--coloraccent);
+  color: var(--text-dark);
   font-weight: bold;
   float: right;
   margin-left: 8px;
@@ -1222,32 +1235,35 @@ summary::-webkit-details-marker {
 .btn-wsp:hover {
   text-decoration: none;
   color: #fff;
-  background-color: #0aa345;
+  background-color: #0b9b42;
   transition: 0.3s ease-in-out;
 }
 
 .btn-scroll-top {
   position: fixed;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  bottom: 90px;
-  right: 30px;
-  background-color: var(--color-principal);
-  color: #fff;
-  border-radius: 50%;
+  bottom: 100px;
+  right: 42px;
+  display: flex;
   text-align: center;
-  font-size: 35px;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
+  justify-content: center;
+  background-color: var(--color-principal);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
   cursor: pointer;
+  color: #fff;
 }
 
 .btn-scroll-top:hover {
   background-color: var(--color-oscuro-hover);
   transition: 0.3s ease-in-out;
   text-decoration: none;
-  color: #fff;
+}
+
+.btn-scroll-top i {
+  font-size: 16px;
+  margin-top: 7px;
 }
 
 @media (max-width: 768px) {
@@ -1255,9 +1271,17 @@ summary::-webkit-details-marker {
     right: 10px;
     bottom: 20px;
   }
+}
 
+@media (max-width: 768px) {
   .btn-scroll-top {
-    right: 10px;
-    bottom: 80px;
+    width: 30px;
+    height: 30px;
+    bottom: 85px;
+    right: 22px;
+  }
+
+  .btn-scroll-top i {
+    font-size: 16px;
   }
 }
