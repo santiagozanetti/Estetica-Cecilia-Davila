@@ -753,135 +753,117 @@ summary::-webkit-details-marker {
 
 /*-------------------------- PROMOCIONES ------------------------ */
 
-.promotions {
+.promociones {
   background-color: #f8f8f8;
-  padding: 50px 0;
+  padding: 50px 20px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.promotions-header {
+.promociones-header {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.section-title {
+.promociones-header h1 {
   font-size: 2.5em;
+  color: var(--color-principal);
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.promociones-header .subtitulo {
+  font-size: 1.2em;
+  color: var(--color-texto-secundario);
+  margin-bottom: 20px;
+}
+
+.promocion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.promocion.reverse {
+  flex-direction: row-reverse;
+}
+
+.imagen-promocion {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.imagen-promocion img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-promocion img:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.texto-promocion {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+
+.texto-promocion h2 {
+  font-size: 2em;
   color: var(--color-principal);
   margin-bottom: 10px;
   text-transform: capitalize;
   font-weight: 700;
 }
 
-.promotion-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.promotion-item {
-  flex: 1 1 calc(50% - 20px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.promotion-image {
-  width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.promotion-image:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.promotion-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.promotion-image:hover .promotion-overlay {
-  opacity: 1;
-}
-
-.promotion-title {
-  font-size: 1.8em;
-  margin: 0 0 10px;
-  text-transform: capitalize;
-  font-weight: 600;
-}
-
-.promotion-description {
-  font-size: 1em;
+.texto-promocion p {
+  font-size: 1.2em;
+  color: var(--color-texto-secundario);
   line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: center;
-  padding: 10px;
 }
 
-.btn {
-  background-color: var(--color-principal);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: 0.2s ease-in-out;
-
-  margin-top: 8px;
-  border: solid 2px transparent;
-  text-align: center;
-  font: var(--p);
-}
-
-.btn:hover {
-  background-color: var(--color-oscuro-hover);
-}
-
-/* Responsividad */
 @media (max-width: 768px) {
-  .promotion-grid {
+  .promocion {
     flex-direction: column;
   }
 
-  .promotion-item {
-    width: 100%;
+  .promociones-header h1 {
+    font-size: 35px;
+  }
+
+  .promociones-header .subtitulo {
+    font-size: 17px;
+  }
+
+  .promocion.reverse {
+    flex-direction: column;
+  }
+
+  .texto-promocion h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .imagen-promocion,
+  .texto-promocion {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .imagen-promocion {
     margin-bottom: 20px;
-  }
-
-  .promotion-title {
-    font-size: 1.5em;
-  }
-
-  .promotion-description {
-    font-size: 0.9em;
   }
 }
 
-/* PRUEBA --------------------------------------------- */
+/* FAQ ----------------------------------------------------------- */
 .collapsible {
   cursor: pointer;
   padding: 36px 20px;
@@ -922,82 +904,78 @@ summary::-webkit-details-marker {
 }
 /*-------------------------- CONTACTO ------------------------*/
 
-.contact {
-  padding: 40px 0;
-  background-color: #f9f9f9;
-}
-
-.contact-container {
-  max-width: 1170px;
-  margin: auto;
+.contact-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffff;
+  margin: 100px;
 }
 
 .contact-info {
-  flex-basis: calc(50% - 20px);
-  margin-bottom: 30px;
+  flex: 1;
 }
 
-.info-item {
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-}
-
-.info-item i {
-  margin-right: 15px;
-  font-size: 20px;
+.contact-info h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
   color: var(--color-principal);
 }
 
-.info-item p {
-  margin: 0;
-}
-
-.info-item a {
-  color: var(--color-principal);
-  text-decoration: none;
+.contact-info p {
+  margin-bottom: 10px;
 }
 
 .social-media {
   display: flex;
+  margin-top: 20px;
+}
+
+.social-media a {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 .social-media a {
   color: var(--color-principal);
-  margin-right: 15px;
-  font-size: 24px;
+  font-size: 28px;
+  padding: 0px 5px;
 }
 
-.map {
-  flex-basis: calc(50% - 20px);
-}
+/* Media Queries ------------- */
 
-.map iframe {
-  width: 100%;
-  height: 400px;
-}
-
-/* Media queries para dispositivos móviles */
-@media screen and (max-width: 768px) {
-  .contact-container {
+@media only screen and (max-width: 768px) {
+  .contact-section {
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 20px;
   }
 
-  .info-item {
+  .contact-info,
+  .map-container {
+    flex: 100%;
     margin-bottom: 20px;
   }
 
-  .info-item i {
-    font-size: 20px;
+  .contact-info h2 {
+    font-size: 38px;
   }
 
-  .social-media a {
-    font-size: 25px;
+  .social-media {
+    justify-content: flex-start;
   }
 }
 
