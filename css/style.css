@@ -902,6 +902,11 @@ summary::-webkit-details-marker {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
+.faqcontent p {
+  color: #333 !important;
+}
+
 /*-------------------------- CONTACTO ------------------------*/
 
 .contact-section {
@@ -918,13 +923,14 @@ summary::-webkit-details-marker {
 }
 
 .contact-info h2 {
-  font-size: 34px;
+  font-size: 44px;
   margin-bottom: 20px;
   color: var(--color-principal);
 }
 
 .contact-info p {
-  margin-bottom: 10px;
+  margin-bottom: 1em;
+  font-size: 1.3em;
 }
 
 .social-media {
@@ -1055,7 +1061,7 @@ summary::-webkit-details-marker {
 }
 
 .testimonials .swiper-pagination-bullet {
-  background-color: var(--color-principal);
+  background-color: transparent;
   opacity: 0.5;
   margin: 0 5px;
 }
