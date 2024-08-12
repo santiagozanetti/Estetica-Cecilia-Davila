@@ -498,7 +498,7 @@ section {
 }
 
 .about-me-text p span {
-  color: var(--color-principal);
+  color: var(--colorbody);
   font-weight: 700;
 }
 
@@ -1120,7 +1120,7 @@ summary::-webkit-details-marker {
 
 /*------------------------------- TESTIMONIOS ----------------------------*/
 .testimonial-section {
-  background-color: var(--950);
+  background-color: var(--200);
   padding: 80px 0;
   text-align: center;
   position: relative;
@@ -1155,7 +1155,7 @@ summary::-webkit-details-marker {
 .testimonial-title {
   font-size: 40px;
   text-transform: uppercase;
-  color: #fff;
+  color: #1d1714;
 }
 .testimonial-slide.active {
   opacity: 1;
@@ -1163,7 +1163,7 @@ summary::-webkit-details-marker {
 }
 
 .testimonial-text {
-  color: #fff;
+  color: #1d1714;
   font-style: italic;
   line-height: 1.4;
   font-size: 20px;
@@ -1172,14 +1172,14 @@ summary::-webkit-details-marker {
 .testimonial-author {
   font-style: italic;
   margin-top: 10px;
-  color: #fff;
+  color: #1d1714;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .prev-btn,
 .next-btn {
-  background-color: #b6c6c9;
+  background-color: #1d1714;
   border: none;
   font-size: 20px;
   cursor: pointer;
