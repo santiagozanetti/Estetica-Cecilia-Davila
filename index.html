@@ -34,7 +34,7 @@
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
-          <a href="#home">beneficios</a>
+          <a href="#benefits">beneficios</a>
           <a href="#nosotros">Quien Soy</a>
           <a href="#tratamientos">Tratamientos</a>
           <a href="#promociones">Promociones</a>
@@ -53,7 +53,19 @@
         playsinline
       ></video>
 
-      <video
+      <div class="content active">
+        <h1>
+          Tratamientos <br />
+          <span>personalizados</span>
+        </h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+          aperiam.
+        </p>
+        <a href="#tratamientos">ver tratamientos</a>
+      </div>
+
+      <!-- <video
         class="video-slide"
         src="assets/video-fondo-2.mp4"
         autoplay
@@ -139,20 +151,20 @@
           aperiam.
         </p>
         <a href="#tratamientos">ver tratamientos</a>
-      </div>
+      </div> -->
       <div class="media-icons">
         <a href="#"><i class="ri-facebook-circle-fill"></i></a>
         <a href="https://www.instagram.com/esteticasanisidro/" target="_blank"
           ><i class="ri-instagram-line"></i
         ></a>
       </div>
-      <div class="slider-navigation">
+      <!-- <div class="slider-navigation">
         <div class="nav-btn active"></div>
         <div class="nav-btn"></div>
         <div class="nav-btn"></div>
         <div class="nav-btn"></div>
         <div class="nav-btn"></div>
-      </div>
+      </div> -->
     </section>
 
     <!---------------- SECCION BENEFICIOS -------------->
@@ -478,129 +490,99 @@
 
     <!------------------------ TESTIMONIOS ------------------------->
 
-    <div class="testimonials-container">
-      <div class="testimonial-title">
-        <h2>Que dicen nuestros pacientes</h2>
-      </div>
-      <section class="testimonials">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial">
-                <p class="quote">
-                  "Excelente la cordialidad y el servicio que ofrece, a mi me
-                  ayudo muchísimo con el drenaje linfático y sin dejar de lado
-                  la limpieza de cutis. Realmente una genia Cecilia"
-                </p>
-                <p class="author">- Cristina Quiroga</p>
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial">
-                <p class="quote">
-                  Muy buenos los tratamientos y la atención es súper cálida Vale
-                  la pena a mi me dió muy buenos resultados Calidad precio es
-                  muy adecuada
-                </p>
-                <p class="author">- Cristina Quiroga</p>
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial">
-                <p class="quote">
-                  Excelente todo lo que hace! Yo me hago pelling,
-                  radiofrecuencia, dermapen y limpieza profunda de cutis y me
-                  deja la piel genial! Además de que te asesora con lo que
-                  necesitas, te brinda productos y tiene buenas promociones!!
-                  Cecilia es muy cálida en su atención! 😉
-                </p>
-                <p class="author">- Cristina Quiroga</p>
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial">
-                <p class="quote">Excelente atención y muy buenas promociones</p>
-                <p class="author">- Cristina Quiroga</p>
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial">
-                <p class="quote">
-                  Excelente y cálida atención! Muy buenos precios y promos
-                </p>
-                <p class="author">- Cristina Quiroga</p>
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial">
-                <p class="quote">
-                  Cecilia es una excelente profesional. Realiza tratamientos
-                  faciales y corporales a medida, intercalando masajes manuales
-                  y aparatlogía para conseguir resultados increíbles.
-                </p>
-                <p class="author">- Cristina Quiroga</p>
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
+    <section class="testimonial-section">
+      <h2 class="testimonial-title">Testimonios</h2>
+      <div class="testimonial-container">
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Excelente la cordialidad y el servicio que ofrece, a mi me ayudo
+            muchísimo con el drenaje linfático y sin dejar de lado la limpieza
+            de cutis. Realmente una genia Cecilia
+          </p>
+          <p class="testimonial-author">- Cristina Quiroga</p>
         </div>
-      </section>
-    </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Muy buenos los tratamientos y la atención es súper cálida Vale la
+            pena a mi me dió muy buenos resultados Calidad precio es muy
+            adecuada
+          </p>
+          <p class="testimonial-author">- Laura Pollitzer de Cassese</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Excelente todo lo que hace! Yo me hago pelling, radiofrecuencia,
+            dermapen y limpieza profunda de cutis y me deja la piel genial!
+            Además de que te asesora con lo que necesitas, te brinda productos y
+            tiene buenas promociones!! Cecilia es muy cálida en su atención! 😉
+          </p>
+          <p class="testimonial-author">- María Eugenia Gomes</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Excelente atención y muy buenas promociones
+          </p>
+          <p class="testimonial-author">- tomas dangelo</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Excelente y cálida atención! Muy buenos precios y promos
+          </p>
+          <p class="testimonial-author">- Maria Oliva Vélez Herbin</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Cecilia es una excelente profesional. Realiza tratamientos faciales
+            y corporales a medida, intercalando masajes manuales y aparatlogía
+            para conseguir resultados increíbles.
+          </p>
+          <p class="testimonial-author">- Natalia Iwasetschko</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Graaaaaacias por los tratamientos q me hiciste...y el peeling muuuy
+            bueno!!!!
+          </p>
+          <p class="testimonial-author">- Paula Matarazzo</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Muy lindo lugar y excelente atencion. Precios muy buenos y tiene
+            promociones.
+          </p>
+          <p class="testimonial-author">- Facundo Zanetti</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">
+            Excelente experiencia y excelente atención. Muy agradecida
+          </p>
+          <p class="testimonial-author">- ines sanchezlanda</p>
+        </div>
+        <div class="testimonial-slide testimonial-transition">
+          <p class="testimonial-text">Excelente atención y calidad !!!</p>
+          <p class="testimonial-author">- Roxana Figueroa</p>
+        </div>
+      </div>
+      <button class="prev-btn" aria-label="Anterior">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="next-btn" aria-label="Siguiente">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
 
     <!------------------------- CONTACTO ------------------------->
 
     <section id="contacto" class="contact-section">
       <div class="contact-info container">
         <h2>Contáctanos</h2>
-        <p><strong>Dirección:</strong> Liniers 500, San Isidro</p>
+        <p><strong>Dirección:</strong> Liniers 500, San Isidro.</p>
         <p><strong>Teléfono:</strong> 11 5037-7127</p>
         <p><strong>Email:</strong> info@dundermifflin.com</p>
         <p>
-          <strong>Horario de atención:</strong> Lunes a Viernes 9:00am - 8:00pm
+          <strong>Horario:</strong> Lunes a Viernes 9:00 - 20:00
           <br />
-          Sábados: 9:00am - 2:00pm
+          Sábados: 9:00 - 14:00
         </p>
         <div class="social-media">
           <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
