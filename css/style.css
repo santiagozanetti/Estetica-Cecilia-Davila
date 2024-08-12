@@ -365,10 +365,10 @@ section {
 /* tamaño para celulares */
 @media (max-width: 768px) {
   header .brand {
-    font-size: 1rem;
+    font-size: 1em;
   }
   .home .content h1 {
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 45px;
