@@ -1317,9 +1317,13 @@ footer {
   padding: 5px 10px;
   font-size: 1.5rem;
   color: #000000;
-  background-color: #e5c641;
+  background-color: var(--color-principal);
   border-radius: 10px;
   text-decoration: none;
+}
+
+.footer__socials {
+  font-size: 0px;
 }
 
 .footer__socials a:hover {
