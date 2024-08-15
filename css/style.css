@@ -1439,3 +1439,107 @@ footer {
     font-size: 16px;
   }
 }
+
+/* ---------------------- PLANES ---------------------- */
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-principal);
+}
+
+.section__subheader {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: var(--colorbody);
+}
+
+a {
+  text-decoration: none;
+}
+
+.price__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.price__card {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--500);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.price__card:hover {
+  background-color: var(--700);
+  border-color: #fff; /* color de los bordes */
+}
+
+.price__card__content {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.price__card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.price__card h3 {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+  border-bottom: 2px solid #fff;
+}
+
+.price__card p {
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.price__card p i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.price__btn {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 1rem 2rem;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.price__btn:hover {
+  color: var(--500);
+  background-color: #fff;
+}
+
+@media (width < 600px) {
+  .price__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
