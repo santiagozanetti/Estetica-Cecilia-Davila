@@ -267,7 +267,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/corporal01.jpg");
+  background-image: url("../assets/fondo.jpg");
   background-size: cover;
   background-position: center;
   filter: brightness(0.6);
@@ -542,7 +542,7 @@ section {
   font-size: 2rem;
   color: var(--color-principal);
   margin-bottom: 25px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s ease;
@@ -664,13 +664,16 @@ section {
 .read-more {
   background-color: var(--color-principal);
   color: #fff;
-  padding: 12px 25px;
-  border-radius: 6px;
-  text-transform: capitalize;
-  transition: 0.3s;
   align-self: flex-start;
   text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
   font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
 }
 
 .read-more:hover {
@@ -1024,50 +1027,50 @@ summary::-webkit-details-marker {
 
 @media screen and (max-width: 768px) {
   .promociones {
-    padding: 20px 10px; 
+    padding: 20px 10px;
   }
 
   .promociones-header h1 {
-    font-size: 2em; 
+    font-size: 2em;
   }
 
   .promociones-header .subtitulo {
-    font-size: 1em; 
+    font-size: 1em;
   }
 
   .promocion {
-    flex-direction: column; 
-    margin-bottom: 20px; 
+    flex-direction: column;
+    margin-bottom: 20px;
     padding: 15px;
   }
 
   .promocion.reverse {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .imagen-promocion {
-    max-width: 100%; 
-    margin: 0 0 15px 0; 
+    max-width: 100%;
+    margin: 0 0 15px 0;
   }
 
   .imagen-promocion img {
-    width: 100%; 
+    width: 100%;
     height: auto;
     border-radius: 10px;
   }
 
   .texto-promocion {
-    max-width: 100%; 
-    text-align: center; 
+    max-width: 100%;
+    text-align: center;
   }
 
   .texto-promocion h2 {
-    font-size: 1.5em; 
+    font-size: 1.5em;
     margin-bottom: 10px;
   }
 
   .texto-promocion p {
-    font-size: 1em; 
+    font-size: 1em;
     line-height: 1.4;
   }
 }
@@ -1537,100 +1540,127 @@ footer {
 
 /* ---------------------- PLANES ---------------------- */
 
+/* Estilos generales */
 .section__container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  background-color: #f9f9f9;
 }
 
 .section__header {
-  margin-bottom: 1rem;
-  font-size: 2.25rem;
-  font-weight: 600;
-  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
   color: var(--color-principal);
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .section__subheader {
-  max-width: 600px;
-  margin: auto;
+  font-size: 1.1rem;
+  max-width: 700px;
+  color: var(--text-color);
   text-align: center;
-  color: var(--colorbody);
+  margin: 0 auto 3rem;
 }
 
-a {
-  text-decoration: none;
-}
-
+/* Grid de precios */
 .price__grid {
-  margin-top: 4rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-items: center;
 }
 
+/* Estilo de las tarjetas de precio */
 .price__card {
-  padding: 3rem 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  background-color: var(--500);
-  border: 2px solid transparent;
-  border-radius: 10px;
-  transition: 0.3s;
+  justify-content: space-between;
 }
 
 .price__card:hover {
-  background-color: var(--700);
-  border-color: #fff; /* color de los bordes */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.price__card__content {
-  flex: 1;
-  margin-bottom: 2rem;
-}
-
-.price__card h4 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+.price__card__content h4 {
+  font-size: 1.4rem;
   font-weight: 500;
-  color: #fff;
-}
-
-.price__card h3 {
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-principal);
   padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+}
+
+.price__card__content h3 {
+  font-size: 2.2rem;
+  color: var(--color-oscuro-hover);
   font-weight: 600;
-  color: var(--white);
-  border-bottom: 2px solid #fff;
+  margin-bottom: 1.5rem;
 }
 
-.price__card p {
-  margin-bottom: 0.75rem;
-  color: #fff;
-}
-
-.price__card p i {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-.price__btn {
-  color: #fff;
-  background-color: transparent;
-  border: 2px solid #fff;
-  padding: 1rem 2rem;
-  outline: none;
+.price__card__content p {
   font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.price__card__content p i {
+  font-size: 1.2rem;
+  color: var(--color-principal);
+  margin-right: 0.5rem;
+}
+
+/* Botón estilo */
+.price__btn {
+  padding: 1rem 2rem;
+  background-color: var(--color-principal);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
   cursor: pointer;
-  transition: 0.3s;
-  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
 }
 
 .price__btn:hover {
-  color: var(--500);
-  background-color: #fff;
+  background-color: var(--color-oscuro-hover);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section__container {
+    padding: 3rem 1rem;
+  }
+
+  .section__header {
+    font-size: 2rem;
+  }
+
+  .section__subheader {
+    font-size: 1.1rem;
+  }
+
+  .price__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price__card {
+    padding: 2rem;
+  }
+
+  .price__btn {
+    padding: 0.75rem 1.5rem;
+  }
 }
 
 @media (width < 600px) {
