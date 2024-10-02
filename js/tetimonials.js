@@ -6,12 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     slides.forEach((slide, i) => {
       if (i === index) {
         slide.classList.add("active");
-        slide.style.opacity = "1"; // Mostrar el testimonio con opacidad
-        slide.style.visibility = "visible"; // Hacer visible el testimonio
+        slide.style.opacity = "1";
       } else {
         slide.classList.remove("active");
-        slide.style.opacity = "0"; // Ocultar el testimonio con opacidad
-        slide.style.visibility = "hidden"; // Ocultar el testimonio
+        slide.style.opacity = "0";
       }
     });
   }
