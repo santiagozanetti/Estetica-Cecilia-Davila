@@ -299,7 +299,7 @@ section {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #e8d8c8;
+  color: #fff;
 }
 
 .home .content a {
@@ -1155,240 +1155,138 @@ summary::-webkit-details-marker {
   .faq-title {
     font-size: 1.8rem;
   }
+
+  .collapsible:after {
+    right: 5px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .faq-title {
     font-size: 1.8rem;
   }
+  .collapsible:after {
+    right: 5px;
+  }
 }
 
 /*-------------------------- CONTACTO ------------------------*/
 
-.contact-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  background-color: #fff;
-  margin: 50px auto 100px auto;
+/* General */
+.section__container {
   max-width: 1200px;
-}
-
-.contact-info {
-  flex: 1;
-  max-width: 500px;
-}
-
-.contact-info h2 {
-  font-size: 44px;
-  margin-bottom: 20px;
-  color: var(--color-principal);
-}
-
-.contact-info p {
-  margin-bottom: 1em;
-  font-size: 1.3em;
-}
-
-.social-media {
-  display: flex;
-  margin-top: 40px;
-}
-
-.social-media a {
-  margin-right: 20px;
-  font-size: 30px;
-  color: var(--color-principal);
-}
-
-.map-container {
-  flex: 1;
-  max-width: 600px; /* Limita el ancho máximo del mapa */
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 450px; /* Aumenta la altura del mapa en pantallas grandes */
-  border: 0;
-}
-
-/* Media Queries ------------- */
-
-@media only screen and (max-width: 1200px) {
-  .contact-section {
-    margin: 50px auto;
-    padding: 40px;
-  }
-
-  .contact-info {
-    max-width: 100%;
-  }
-
-  .map-container {
-    max-width: 100%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .contact-section {
-    flex-direction: column;
-    justify-content: center;
-    margin: 50px auto;
-    padding: 20px;
-  }
-
-  .contact-info,
-  .map-container {
-    flex: 100%;
-    margin-bottom: 20px;
-  }
-
-  .contact-info h2 {
-    font-size: 38px;
-  }
-
-  .map-container iframe {
-    height: 300px;
-  }
-
-  .social-media {
-    justify-content: flex-start;
-  }
-}
-
-/*------------------------------- TESTIMONIOS ----------------------------*/
-.testimonial-section {
-  background-color: var(--200);
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-}
-
-.testimonial-title {
-  font-size: 40px;
-  text-transform: uppercase;
-  color: #1d1714;
-  margin-bottom: 20px;
-}
-
-.testimonial-subtitle {
-  text-align: center;
-  font-size: 1.25rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.testimonial-container {
-  max-width: 800px;
   margin: 0 auto;
-  position: relative;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem;
 }
 
-.testimonial-slide {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  position: absolute;
+.contact__section {
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact__header h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-principal);
+}
+
+.contact__header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Contenedor de Contacto */
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Formulario de Contacto */
+.contact__form form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form__group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
 }
 
-.testimonial-slide.active {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
+.form__group label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
 }
 
-.testimonial-content {
-  max-width: 700px;
-  padding: 0 20px;
+.form__group input,
+.form__group textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
 }
 
-.testimonial-text {
-  color: #1d1714;
-  font-style: italic;
-  line-height: 1.6;
-  font-size: 20px;
-  margin-bottom: 15px;
+.form__group input:focus,
+.form__group textarea:focus {
+  outline: none;
+  border-color: #333;
 }
 
-.testimonial-author {
-  font-style: italic;
-  color: #1d1714;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.prev-btn,
-.next-btn {
-  background-color: #1d1714;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  text-align: center;
+.submit__btn {
+  background-color: var(--color-principal);
   color: #fff;
-  border-radius: 50%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.prev-btn {
-  left: 30px;
+.submit__btn:hover {
+  background-color: var(--color-oscuro-hover);
 }
 
-.next-btn {
-  right: 30px;
+/* Mapa */
+.contact__map {
+  width: 100%;
+  height: 400px;
 }
 
-.testimonial-section:hover .prev-btn,
-.testimonial-section:hover .next-btn {
-  opacity: 1;
+.contact__map iframe {
+  border-radius: 10px;
 }
 
-.prev-btn,
-.next-btn {
-  opacity: 0;
-  transition: opacity 0.3s;
+/* Responsividad */
+@media (max-width: 900px) {
+  .contact__content {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width: 768px) {
-  .testimonial-title {
-    font-size: 1.5rem; /* Título más pequeño en móviles */
+@media (max-width: 600px) {
+  .contact__header h2 {
+    font-size: 2rem;
   }
 
-  .testimonial-subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 10px; /* Ajuste de márgenes para pantallas pequeñas */
+  .contact__header p {
+    font-size: 1rem;
   }
 
-  .testimonial-content {
-    padding: 15px; /* Reducimos el padding para más espacio en pantalla pequeña */
+  .contact__map {
+    height: 250px;
   }
 
-  .testimonial-text {
-    font-size: 0.95rem; /* Texto más pequeño para que sea legible en móviles */
-  }
-
-  .testimonial-author {
-    font-size: 0.85rem;
-  }
-
-  /* Botones de navegación más pequeños y ajustados en móviles */
-  .prev-btn,
-  .next-btn {
-    font-size: 1.25rem;
+  .submit__btn {
+    width: 100%;
+    padding: 1rem;
   }
 }
 
@@ -1562,26 +1460,18 @@ footer {
 
 /* ---------------------- PLANES ------------------------------------------------ */
 
-/* Estilos generales */
-.section__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-  background-color: #f9f9f9;
-}
-
 .section__header {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-principal);
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .section__subheader {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   max-width: 700px;
-  color: var(--text-color);
+  color: var(--700);
   text-align: center;
   margin: 0 auto 3rem;
 }
@@ -1612,24 +1502,24 @@ footer {
 }
 
 .price__card__content h4 {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--color-principal);
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--color-principal);
+  border-bottom: 2px solid var(--300);
   padding-bottom: 1rem;
 }
 
 .price__card__content h3 {
-  font-size: 2.2rem;
-  color: var(--color-oscuro-hover);
-  font-weight: 600;
+  font-size: 2.4rem;
+  color: var(--500);
+  font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
 .price__card__content p {
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--text-dark);
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -1644,7 +1534,7 @@ footer {
 /* Botón estilo */
 .price__btn {
   padding: 1rem 2rem;
-  background-color: var(--color-principal);
+  background-color: var(--color-principal); /* Botones con el color principal */
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
@@ -1697,22 +1587,115 @@ footer {
   width: 12px; /* Ancho de la scrollbar */
 }
 
-/* Estilo del "track", el fondo de la scrollbar */
+/* Estilo del fondo de la scrollbar */
 ::-webkit-scrollbar-track {
   background-color: var(--white); /* Color del fondo */
   border-radius: 10px; /* Bordes redondeados */
 }
 
-/* Estilo del "thumb", la parte que se desplaza */
+/* Estilo de la parte que se desplaza */
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-principal); /* Color de la scrollbar */
-  border-radius: 10px; /* Bordes redondeados */
-  border: 3px solid var(--color-principal); /* Añade un borde para un efecto más limpio */
+  border-radius: 10px;
+  border: 3px solid var(--color-principal);
 }
 
-/* Hover del thumb */
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(
     --color-oscuro-hover
   ); /* Cambia de color al hacer hover */
+}
+
+/* ---------------------------------- TESTIMONIOS ---------------------------------- */
+
+.section__container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header p {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-principal);
+}
+
+.header h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+}
+
+.testimonials__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  background-color: var(--extra-light);
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: var(--color-principal);
+}
+
+.card p {
+  font-size: 1.1rem;
+  /* font-weight: 500; */
+  color: var(--text-dark);
+  line-height: 1.5rem;
+}
+
+.card hr {
+  width: 100px;
+  margin: auto;
+  color: var(--text-light);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.card .name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+@media (width < 900px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .header h2 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (width < 600px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
